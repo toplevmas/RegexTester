@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{F1040FFB-F759-4E98-898B-809A1A9D63C6}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>RegexTester</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationIcon>regex.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>Bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="QWhale.Common, Version=1.63.0.0, Culture=neutral, PublicKeyToken=da632fd1713dff10, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\QWhale.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="QWhale.Editor, Version=1.63.0.0, Culture=neutral, PublicKeyToken=da632fd1713dff10, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\QWhale.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="QWhale.Syntax, Version=1.63.0.0, Culture=neutral, PublicKeyToken=da632fd1713dff10, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\QWhale.Syntax.dll</HintPath>
+    </Reference>
+    <Reference Include="QWhale.Syntax.Parsers, Version=1.63.0.0, Culture=neutral, PublicKeyToken=da632fd1713dff10, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\QWhale.Syntax.Parsers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RegexTester.My.Resources\Resources.cs" />
+    <Compile Include="RegexTester.My\MyApplication.cs" />
+    <Compile Include="RegexTester.My\MyComputer.cs" />
+    <Compile Include="RegexTester.My\MyProject.cs" />
+    <Compile Include="RegexTester.My\MySettingsProperty.cs" />
+    <Compile Include="RegexTester\AboutBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegexTester\AlphaComparer.cs" />
+    <Compile Include="RegexTester\Command.cs" />
+    <Compile Include="RegexTester\CompileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegexTester\DetailOption.cs" />
+    <Compile Include="RegexTester\EscapeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegexTester\FormatOption.cs" />
+    <Compile Include="RegexTester\GenerateCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegexTester\Helpers.cs" />
+    <Compile Include="RegexTester\LanguageOption.cs" />
+    <Compile Include="RegexTester\LargestComparer.cs" />
+    <Compile Include="RegexTester\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegexTester\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegexTester\NodeInfo.cs" />
+    <Compile Include="RegexTester\ProjectOptions.cs" />
+    <Compile Include="RegexTester\PropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegexTester\RegexInfo.cs" />
+    <Compile Include="RegexTester\Settings.cs" />
+    <Compile Include="RegexTester\ShortestComparer.cs" />
+    <Compile Include="RegexTester\SortOption.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RegexTester\AboutBoxForm.resources" />
+    <EmbeddedResource Include="RegexTester\CompileForm.resources" />
+    <EmbeddedResource Include="RegexTester\EscapeForm.resources" />
+    <EmbeddedResource Include="RegexTester\GenerateCodeForm.resources" />
+    <EmbeddedResource Include="RegexTester\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegexTester\PropertiesForm.resources" />
+    <EmbeddedResource Include="RegexTester\Regexes.xml" />
+    <EmbeddedResource Include="RegexTester\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="regex.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
