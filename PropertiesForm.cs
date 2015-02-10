@@ -458,14 +458,14 @@ namespace RegexTester
 		[DebuggerStepThrough]
 		private void InitializeComponent()
 		{
-			this.components = new Container();
-			this.GroupBox1 = new GroupBox();
-			this.chkEcmaScript = new CheckBox();
-			this.chkCultureInvariant = new CheckBox();
-			this.chkRightToLeft = new CheckBox();
-			this.chkExplicitCapture = new CheckBox();
-			this.chkCompiled = new CheckBox();
-			this.chkMultiline = new CheckBox();
+            this.components = new System.ComponentModel.Container();
+            this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkEcmaScript = new System.Windows.Forms.CheckBox();
+            this.chkCultureInvariant = new System.Windows.Forms.CheckBox();
+            this.chkRightToLeft = new System.Windows.Forms.CheckBox();
+            this.chkExplicitCapture = new System.Windows.Forms.CheckBox();
+            this.chkCompiled = new System.Windows.Forms.CheckBox();
+            this.chkMultiline = new System.Windows.Forms.CheckBox();
 			this.chkIgnoreWhitespace = new CheckBox();
 			this.chkIgnoreCase = new CheckBox();
 			this.Label3 = new Label();
@@ -855,7 +855,7 @@ namespace RegexTester
 			this.btnOK.Text = "OK";
 			this.ToolTip1.SetToolTip(this.btnOK, "Save all properties and close the dialog box.");
 			this.btnOK.UseVisualStyleBackColor = true;
-			this.btnCancel.DialogResult = DialogResult.Cancel;
+			this.btnCancel.DialogResult =System.Windows.Forms. DialogResult.Cancel;
 			Control arg_1150_0 = this.btnCancel;
 			location = new Point(553, 405);
 			arg_1150_0.Location = location;
@@ -881,7 +881,7 @@ namespace RegexTester
 			this.AcceptButton = this.btnOK;
 			SizeF autoScaleDimensions = new SizeF(6f, 13f);
 			this.AutoScaleDimensions = autoScaleDimensions;
-			this.AutoScaleMode = AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.btnCancel;
 			size = new Size(639, 439);
 			this.ClientSize = size;
@@ -890,7 +890,7 @@ namespace RegexTester
 			this.Controls.Add(this.btnOK);
 			this.Controls.Add(this.GroupBox2);
 			this.Controls.Add(this.GroupBox1);
-			this.FormBorderStyle = FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "PropertiesForm";

@@ -13,7 +13,7 @@ namespace RegexTester
 	{
 		private IContainer components;
 		[AccessedThroughProperty("Label1")]
-		private Label _Label1;
+		private Label Label1;
 		[AccessedThroughProperty("txtText")]
 		private TextBox _txtText;
 		[AccessedThroughProperty("radEscape")]
@@ -37,18 +37,7 @@ namespace RegexTester
 		[AccessedThroughProperty("HelpProvider1")]
 		private HelpProvider _HelpProvider1;
 		public ProjectOptions Options;
-		internal virtual Label Label1
-		{
-			get
-			{
-				return this._Label1;
-			}
-			[MethodImpl(MethodImplOptions.Synchronized)]
-			set
-			{
-				this._Label1 = value;
-			}
-		}
+		 
 		internal virtual TextBox txtText
 		{
 			get
@@ -227,7 +216,7 @@ namespace RegexTester
 			}
 			base.Dispose(disposing);
 		}
-		[DebuggerStepThrough]
+		//[DebuggerStepThrough]
 		private void InitializeComponent()
 		{
 			this.components = new Container();
@@ -325,7 +314,7 @@ namespace RegexTester
 			this.chkCopyToClipboard.Text = "C&opy result to Clipboard";
 			this.ToolTip1.SetToolTip(this.chkCopyToClipboard, "If selected, the result is copied to the Clipboard §when the user clicks on the OK button.");
 			this.chkCopyToClipboard.UseVisualStyleBackColor = true;
-			this.btnOK.DialogResult = DialogResult.OK;
+            this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
 			Control arg_43D_0 = this.btnOK;
 			location = new Point(451, 237);
 			arg_43D_0.Location = location;
@@ -337,7 +326,7 @@ namespace RegexTester
 			this.btnOK.Text = "OK";
 			this.ToolTip1.SetToolTip(this.btnOK, "Close the dialog box and optionally copy the result to the Clipboard.");
 			this.btnOK.UseVisualStyleBackColor = true;
-			this.btnCancel.DialogResult = DialogResult.Cancel;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			Control arg_4CB_0 = this.btnCancel;
 			location = new Point(532, 237);
 			arg_4CB_0.Location = location;
@@ -363,7 +352,7 @@ namespace RegexTester
 			this.AcceptButton = this.btnOK;
 			SizeF autoScaleDimensions = new SizeF(6f, 13f);
 			this.AutoScaleDimensions = autoScaleDimensions;
-			this.AutoScaleMode = AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.btnCancel;
 			size = new Size(619, 270);
 			this.ClientSize = size;

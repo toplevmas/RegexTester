@@ -1,0 +1,12 @@
+E:\MyGit\RegexTester\Bin\RegexTester.exe
+E:\MyGit\RegexTester\Bin\RegexTester.pdb
+E:\MyGit\RegexTester\Bin\QWhale.Common.dll
+E:\MyGit\RegexTester\Bin\QWhale.Editor.dll
+E:\MyGit\RegexTester\Bin\QWhale.Syntax.dll
+E:\MyGit\RegexTester\Bin\QWhale.Syntax.Parsers.dll
+E:\MyGit\RegexTester\obj\Debug\ResolveAssemblyReference.cache
+E:\MyGit\RegexTester\obj\Debug\RegexTester.MainForm.resources
+E:\MyGit\RegexTester\obj\Debug\RegexTester.csproj.GenerateResource.Cache
+E:\MyGit\RegexTester\obj\Debug\RegexTester.exe
+E:\MyGit\RegexTester\obj\Debug\RegexTester.pdb
+E:\MyGit\RegexTester\obj\Debug\RegexTester.RegexHelpForm.resources

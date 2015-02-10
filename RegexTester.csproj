@@ -9,6 +9,7 @@
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <WarningLevel>4</WarningLevel>
     <ApplicationIcon>regex.ico</ApplicationIcon>
+    <RootNamespace>RegexTester</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,58 +56,71 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RegexTester.My.Resources\Resources.cs" />
-    <Compile Include="RegexTester.My\MyApplication.cs" />
-    <Compile Include="RegexTester.My\MyComputer.cs" />
-    <Compile Include="RegexTester.My\MyProject.cs" />
-    <Compile Include="RegexTester.My\MySettingsProperty.cs" />
-    <Compile Include="RegexTester\AboutBoxForm.cs">
+    <Compile Include="My.Resources\Resources.cs" />
+    <Compile Include="My\MyApplication.cs" />
+    <Compile Include="My\MyComputer.cs" />
+    <Compile Include="My\MyProject.cs" />
+    <Compile Include="My\MySettingsProperty.cs" />
+    <Compile Include="AboutBoxForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegexTester\AlphaComparer.cs" />
-    <Compile Include="RegexTester\Command.cs" />
-    <Compile Include="RegexTester\CompileForm.cs">
+    <Compile Include="AlphaComparer.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="CompileForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegexTester\DetailOption.cs" />
-    <Compile Include="RegexTester\EscapeForm.cs">
+    <Compile Include="DetailOption.cs" />
+    <Compile Include="EscapeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegexTester\FormatOption.cs" />
-    <Compile Include="RegexTester\GenerateCodeForm.cs">
+    <Compile Include="FormatOption.cs" />
+    <Compile Include="GenerateCodeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegexTester\Helpers.cs" />
-    <Compile Include="RegexTester\LanguageOption.cs" />
-    <Compile Include="RegexTester\LargestComparer.cs" />
-    <Compile Include="RegexTester\MainForm.cs">
+    <Compile Include="Helpers.cs" />
+    <Compile Include="LanguageOption.cs" />
+    <Compile Include="LargestComparer.cs" />
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegexTester\MainForm.Designer.cs">
+    <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegexTester\NodeInfo.cs" />
-    <Compile Include="RegexTester\ProjectOptions.cs" />
-    <Compile Include="RegexTester\PropertiesForm.cs">
+    <Compile Include="NodeInfo.cs" />
+    <Compile Include="ProjectOptions.cs" />
+    <Compile Include="PropertiesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegexTester\RegexInfo.cs" />
-    <Compile Include="RegexTester\Settings.cs" />
-    <Compile Include="RegexTester\ShortestComparer.cs" />
-    <Compile Include="RegexTester\SortOption.cs" />
+    <Compile Include="RegexHelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegexHelpForm.Designer.cs">
+      <DependentUpon>RegexHelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegexInfo.cs" />
+    <Compile Include="RichTextBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="ShortestComparer.cs" />
+    <Compile Include="SortOption.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="RegexTester\AboutBoxForm.resources" />
-    <EmbeddedResource Include="RegexTester\CompileForm.resources" />
-    <EmbeddedResource Include="RegexTester\EscapeForm.resources" />
-    <EmbeddedResource Include="RegexTester\GenerateCodeForm.resources" />
-    <EmbeddedResource Include="RegexTester\MainForm.resx">
+    <EmbeddedResource Include="AboutBoxForm.resources" />
+    <EmbeddedResource Include="CompileForm.resources" />
+    <EmbeddedResource Include="EscapeForm.resources" />
+    <EmbeddedResource Include="GenerateCodeForm.resources" />
+    <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegexTester\PropertiesForm.resources" />
-    <EmbeddedResource Include="RegexTester\Regexes.xml" />
-    <EmbeddedResource Include="RegexTester\Resources.resources" />
+    <EmbeddedResource Include="PropertiesForm.resources" />
+    <EmbeddedResource Include="Regexes.xml" />
+    <EmbeddedResource Include="RegexHelpForm.resx">
+      <DependentUpon>RegexHelpForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resources" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="regex.ico" />

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <groups>
-   <group text="Substitutions" toolTip="" includeBits="2">
+   <group text="Substitutions(替换)" toolTip="" includeBits="2">
       <item text="N-th group" toolTip="Substitutes the last substring matched by group number N." regex="$§N§" />
       <item text="Named group" toolTip="Substitutes the last substring matched by a (?&lt;name>) group." regex="${§name§}" />
       <item text="Entire match" toolTip="Substitutes the entire match." regex="$0" />
@@ -10,7 +10,7 @@
       <item text="Source string before match" toolTip="Substitutes the portion of the source string up to the match." regex="$`" />
       <item text="Source string after match" toolTip="Substitutes the portion of the source string that follows the match." regex="$'" />
    </group>
-   <group text="Character escapes" toolTip="" includeBits="3">
+   <group text="Character escapes(字符转义)" toolTip="" includeBits="3">
       <item text="Tab" toolTip="The tab character: \t" regex="\t" />
       <item text="Carriage return" toolTip="The carriage return character: \r" regex="\r" />
       <item text="Newline" toolTip="The newline character: \n" regex="\n" />
@@ -30,7 +30,7 @@
       <item text="Open bracket" toolTip="The [ character" regex="\[" />
       <item text="Close bracket" toolTip="The ] character" regex="\]" />
    </group>
-   <group text="Character classes" toolTip="" includeBits="1">
+   <group text="Character classes(字符类)" toolTip="" includeBits="1">
       <item text="Any character ." toolTip="Any character (except newline if using Multiline option)" regex="." />
       <item text="A character in a list" toolTip="Any character in the list between square brackets" regex="[§list§]" />
       <item text="A character not in a list" toolTip="Any character not in the list between square brackets" regex="[^§list§]" />
@@ -45,7 +45,7 @@
       <item text="Unicode character class" toolTip="A character in the specified Unicode class" regex="\p{§name§}" />
       <item text="Non-Unicode character class" toolTip="A character not in the specified Unicode class" regex="\P{§name§}" />
    </group>
-   <group text="Atomic zero-width assertions" toolTip="" includeBits="1">
+   <group text="Atomic zero-width assertions(定位点)" toolTip="" includeBits="1">
       <item text="Start of line" toolTip="The beginning of line, or the beginning of §string if not using Multiline option" regex="^" />
       <item text="End of line" toolTip="The end of line, or the end of string if §not using Multiline option" regex="$" />
       <item text="Start of string" toolTip="The beginning of string. §Like ^ but ignores the Multiline option." regex="\A" />
@@ -55,7 +55,7 @@
       <item text="Word boundary" toolTip="The boundary between alphanumeric non-alphanumeric characters. §It indicates the first and last characters of a word delimited §by spaces or other punctuation symbols." regex="\b" />
       <item text="Non-word boundary" toolTip="Not on a word boundary" regex="\B" />
    </group>
-   <group text="Quantifiers" toolTip="" includeBits="1">
+   <group text="Quantifiers(限定符)" toolTip="" includeBits="1">
       <item text="Zero or one matches" toolTip="An optional item." regex="?" />
       <item text="Zero or more matches" toolTip="An optional item that can be repeated as many times as desired." regex="*" />
       <item text="One or more matches" toolTip="An item that must occur at least once and §can be repeated as many times as desired." regex="+" />
@@ -69,7 +69,7 @@
       <item text="At least N matches (lazy)" toolTip="As few repeats as possible, but at least N." regex="{§N§,}?" />
       <item text="Between N and M matches (lazy)" toolTip="As few repeats as possible, but between N and M." regex="{§N§,M}?" />
    </group>
-   <group text="Groups" toolTip="" includeBits="1">
+   <group text="Groups(分组构造)" toolTip="" includeBits="1">
       <item text="Capture" toolTip="Captures the matched substring. §Captures are numbered starting at 1." regex="(§expr§)" />
       <item text="Named capture" toolTip="Captures the subexpression and assigns it a name. §The name must not contain any punctuation symbols." regex="(?&lt;§name§>expr)" />
       <item text="Non-capturing group" toolTip="A group that doesn't appear in the Groups collection of the Match object." regex="(?:§expr§)" />
@@ -89,12 +89,12 @@
       <item text="Singleline mode" toolTip="An expression evaluated in Singleline mode." regex="(?s:§expr§)"/>
       <item text="Multiline mode" toolTip="An expression evaluated in Multiline mode." regex="(?m:§expr§)"/>
    </group>
-   <group text="Alternating constructs" toolTip="" includeBits="1">
+   <group text="Alternating constructs(替换构造)" toolTip="" includeBits="1">
       <item text="Either/or" toolTip="Either first argument or second argument. §Leftmost successful match wins." regex="|§expr§" />
       <item text="Condition on expression" toolTip="Matches the yes part if the expression matches at §this point; otherwise, matches the no part. §The expression is turned into a zero-width assertion." regex="(?(§expr§)yes|no)" />
       <item text="Condition on named group" toolTip="Matches the yes part if the named capture string §has a match; otherwise, matches the no part. §The no part can be omitted." regex="(?(§name§)yes|no)" />
    </group>
-   <group text="Other" toolTip="" includeBits="1">
+   <group text="Other(其他)" toolTip="" includeBits="1">
       <item text="Inline comment" toolTip="The text that follows the # sign and continues §until the first closing ) character is ignored." regex="(?# comment)" />
       <item text="X-mode comment" toolTip="the text that follows the # sign until the end §of line is ignored. This construct requires that the x option §or the RegexOptions.IgnorePatternWhiteSpace enumerated option be activated." regex="# " />
       <item text="-" />
@@ -110,7 +110,7 @@
       <item text="Disable IgnorePatternWhitespace mode" toolTip="Disables the IgnorePatternWhitespace mode." regex="(?-x)" />
    </group>
    <group text="-" includeBits="1" />
-   <group text="Numbers" toolTip="" includeBits="1">
+   <group text="Numbers(数字)" toolTip="" includeBits="1">
       <item text="Positive integer" toolTip="A positive integer, without a leading sign." regex="\d+" />
       <item text="Integer" toolTip="A positive or negative integer with an optional sign." regex="[+-]?\d+" />
       <item text="Floating-point" toolTip="A floating-point number whose sign and decimal portion are optional." regex="[+-]?\d+(\.\d+)?" />
@@ -121,7 +121,7 @@
       <item text="Integer in range 1-99" toolTip="An integer number in the range 1-99." regex="(?!0)\d{1,2}" />
       <item text="Integer in range 0-255" toolTip="An integer number in the range 0-255." regex="(25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)" />
    </group>
-   <group text="Strings" toolTip="" includeBits="1">
+   <group text="Strings(字符串)" toolTip="" includeBits="1">
       <item text="Word (alphabetic)" toolTip="A sequence of alphabetic characters." regex="\b[A-Za-z]+\b" />
       <item text="Word (alphanumeric)" toolTip="A sequence of alphanumerical and underscore characters." regex="\b\w+\b" />
       <item text="All-uppercase word" toolTip="A sequence of uppercase alphabetic characters." regex="\b[A-Z]+\b" />
@@ -136,12 +136,12 @@
       <item text="Words not in list" toolTip="Words other than those in a list. Useful to avoid noise words, §such as articles, conjunctions, etc." regex="\b(?!(the|a|an|and|or|on|of|with)\b)\w+" />
       <item text="Proximity search" toolTip="Words that aren't apart for more than NN other words." regex="\b§word1§(\W+\w+){0,NN}\W+\bword2\b" />
    </group>
-   <group text="Dates and times" toolTip="" includeBits="1">
+   <group text="Dates and times(日期和时间)" toolTip="" includeBits="1">
       <item text="U.S. date" toolTip="A U.S. date in the mm-dd-yyyy or mm/dd/yyyy format. §Month and day numbers can have a leading zero; month number must be §in the range 1–12; day number must be in the range 1–31. §Invalid dates such as 2/30/2004 are matched); year number §can have two or four digits and isn’t validated." regex="(10|11|12|0?[1–9])(?&lt;sep[-/])(30|31|2\d|1\d|0?[1–9])\k&lt;sep>(\d{4}|\d{2})" />
       <item text="Eurepean date" toolTip="A European date in the dd-mm-yyyy or dd/mm/yyyy format. §Month and day numbers can have a leading zero; month number must be §in the range 1–12; day number must be in the range 1–31. §Invalid dates such as 2/30/2004 are matched); year number §can have two or four digits and isn’t validated." regex="(30|31|2\d|1\d|0?[1–9])(?&lt;sep>[-/])(10|11|12|0?[1–9])\k&lt;sep>(\d{4}|\d{2})" />
       <item text="24-hour time" toolTip="A time value in the hh:mm 24-hour format; §leading zero for hour value is optional." regex="(2[0–3]|[01]\d|\d):[0–5]\d" />
    </group>
-   <group text="Miscellaneous" toolTip="" includeBits="1">
+   <group text="Miscellaneous(杂项)" toolTip="" includeBits="1">
       <item text="Filename" toolTip="A Windows filename, with or without a drive and a directory name." regex="([A–Za–z]:)?\\?([^/:*?&lt;>&quot;|\\]+\\)*[^/:*?&lt;>&quot;|\\]+" />
       <item text="Internet URL" toolTip="An Internet URL; it matches protocol names regardless of their case, such as HTTP or Https." regex="(?i:http|https)://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" />
       <item text="Email address" toolTip="An Internet e-mail address." regex="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
